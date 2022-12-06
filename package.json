@@ -1,0 +1,17 @@
+{
+  "name": "lightsnow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "zola serve",
+    "dev": "tailwindcss -i ./src/css/main.css -o ./static/css/main.css --watch",
+    "build": "tailwindcss -i ./src/css/main.css -o ./static/css/main.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

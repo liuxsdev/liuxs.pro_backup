@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+    This is my blog made with Zola.
+    <p>Click <a href="{{ get_url(path="@/blog/_index.md") }}" class="text-blue-400">here</a> to see my posts.</p>
+</article>
+
+{% endblock content %}
