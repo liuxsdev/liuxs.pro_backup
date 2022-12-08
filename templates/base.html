@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{get_url(path="/css/main.css",trailing_slash=false)}}" />
+    <link rel="stylesheet" href="{{ get_url(path = '/css/main.css', trailing_slash = false) }}" />
     <title>Light Snow - Theme</title>
   </head>
   <body>
@@ -14,41 +14,32 @@
           <div class="font-semibold text-cyan-900 mx-4">{{ config.title }}</div>
           <div id="menu">
             <ul class="flex items-center space-x-4 mx-4">
-              <li><a href="/" class="text-cyan-900">主页</a></li>
+              <li>
+                <a href="/" class="text-cyan-900">主页</a>
+              </li>
             </ul>
           </div>
         </nav>
       </header>
       <main class="flex-1 flex justify-center space-x-4">
-        <div class="w-3/5 m-4">{% block content %} {% endblock %}</div>
+        <div class="w-3/5 m-4">
+          {% block content %}
+
+          {% endblock %}
+        </div>
       </main>
       <footer class="flex justify-center text-xs text-gray-600">
         <div class="py-2">
           <div class="text-center">
             <span itemprop="copyrightYear">©2022 liuxs</span>
-            <span> CC-BY-NC-4.0 </span>
+            <span>CC-BY-NC-4.0</span>
           </div>
           <div>
             Powered by
-            <a
-              href="https://getzola.org/"
-              target="_blank"
-              rel="noopener noreffer"
-              class="text-green-700 hover:underline hover:font-extrabold"
-            >
-              Zola
-            </a>
+            <a href="https://getzola.org/" target="_blank" rel="noopener noreffer" class="text-green-700 hover:underline hover:font-extrabold">Zola</a>
             <span>| Theme -</span>
-            <a
-              href="https://github.com/liuxsdev/LightSnow"
-              target="_blank"
-              rel="noopener noreffer"
-              title=""
-              class="text-sky-600 hover:underline hover:font-extrabold"
-            >
-              Light Snow
-            </a>
-            <span> | Code with 🧡 by liuxs</span>
+            <a href="https://github.com/liuxsdev/LightSnow" target="_blank" rel="noopener noreffer" title="" class="text-sky-600 hover:underline hover:font-extrabold">Light Snow</a>
+            <span>| Code with 🧡 by liuxs</span>
           </div>
         </div>
       </footer>

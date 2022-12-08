@@ -1,8 +1,13 @@
-{% extends "base.html" %} {% block content %}
+{% extends 'base.html' %}
 
-<article>
-  <h1 class="title">{{ page.title }}</h1>
-  <p class="subtitle"><strong>{{ page.date }}</strong></p>
-  {{ page.content | safe }}
-</article>
-{% endblock content %}
+{% block content %}
+  <article>
+    <h1 class="title">{{ page.title }}</h1>
+    <p class="subtitle">
+      <strong>{{ page.date }}</strong>
+    </p>
+    <p>字数:{{ page.word_count }}</p>
+    <p>阅读时间: {{ page.reading_time }} 分钟</p>
+    {{ page.content|safe }}
+  </article>
+{% endblock %}
