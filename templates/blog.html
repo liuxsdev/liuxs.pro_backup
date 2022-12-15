@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1 class="text-lg my-4">{{ section.title }}</h1>
+  <h1 class="text-lg my-4 font-ubuntu">{{ section.title }}</h1>
   <div class=""></div>
   <hr />
   <div>
     {% for year, pages in section.pages|group_by(attribute = 'year') %}
-      <div class="posts-group flex flex-row mb-6">
-        <div class="post-year text-2xl mr-6 pt-4 opacity-75">{{ year }}</div>
+      <div class="posts-group flex-row mb-6 sm:flex">
+        <div class="post-year text-lg p-2 pt-4 opacity-60 font-din font-semibold sm:mr-6 sm:text-2xl">{{ year }}</div>
         <div class="posts grow">
           {% for page in pages %}
-            <div class="p-2 border-b border-dashed border-gray-300 hover:bg-gray-100">
-              <a href="{{ page.permalink }}" class="flex justify-between py-2">
-                <span class="font-semibold text-gray-700">{{ page.title }}</span>
-                <span class="shrink-0 text-sm text-gray-600 font-semibold">{{ page.date|date(format = '%Y / %m / %d') }}</span>
+            <div class="p-2 border-b border-dashed border-gray-300">
+              <a href="{{ page.permalink }}" class="flex justify-between items-center py-2">
+                <span class="font-din text-gray-700 text-sm hover:text-gray-900 hover:font-semibold sm:text-base">{{ page.title }}</span>
+                <span class="shrink-0 text-sm text-gray-600 font-light font-din">{{ page.date|date(format = '%Y / %m / %d') }}</span>
               </a>
             </div>
           {% endfor %}
