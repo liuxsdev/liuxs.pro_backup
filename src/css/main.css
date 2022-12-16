@@ -5,9 +5,11 @@
 @font-face {
   font-family: "ubuntu";
   src: url(/font/Ubuntu-R.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: "din";
   src: url(/font/DINPro-Medium.woff2);
+  font-display: swap;
 }
