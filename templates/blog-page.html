@@ -2,12 +2,19 @@
 
 {% block content %}
   <article>
-    <h1 class="title">{{ page.title }}</h1>
-    <p class="subtitle">
-      <strong>{{ page.date }}</strong>
-    </p>
-    <p>字数:{{ page.word_count }}</p>
-    <p>阅读时间: {{ page.reading_time }} 分钟</p>
-    {{ page.content|safe }}
+    <div class="artcontainer">
+      <div class="mb-4 border-b">
+        <div id="title">
+          <div id="title" class="py-2 my-2 text-2xl font-semibold font-din sm:my-4">{{ page.title }}</div>
+        </div>
+        <div id="info" class="flex space-x-1 mb-4 text-sm text-gray-600 font-ubuntu">
+          <p>{{ page.date|date(format = '%Y/%m/%d') }}</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start">
+        <div id="content" class="prose max-w-full">{{ page.content|safe }}</div>
+      </div>
+    </div>
   </article>
 {% endblock %}

@@ -1,5 +1,5 @@
 +++
-title = "markdown"
+title = "Markdown 基本语法"
 date = 2019-11-27
 +++
 
@@ -40,9 +40,9 @@ date = 2019-11-27
 HTML 中的 `<hr>` 标签是用来在段落元素之间创建一个 "专题间隔" 的.
 使用 Markdown, 你可以用以下方式创建一个 `<hr>` 标签:
 
--   `___`: 三个连续的下划线
--   `---`: 三个连续的破折号
--   `***`: 三个连续的星号
+- `___`: 三个连续的下划线
+- `---`: 三个连续的破折号
+- `***`: 三个连续的星号
 
 呈现的输出效果如下:
 
@@ -164,7 +164,7 @@ _渲染为斜体_
 <del><strong>删除线和加粗</strong></del>
 <del><em>删除线和斜体</em></del>
 <del
-    ><em><strong>加粗, 斜体和删除线</strong></em></del
+  ><em><strong>加粗, 斜体和删除线</strong></em></del
 >
 ```
 
@@ -186,10 +186,10 @@ _渲染为斜体_
 
 ```html
 <blockquote>
-    <p>
-        <strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as
-        a single logical volume with the space of both drives combined.
-    </p>
+  <p>
+    <strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a
+    single logical volume with the space of both drives combined.
+  </p>
 </blockquote>
 ```
 
@@ -220,65 +220,65 @@ _渲染为斜体_
 你可以使用以下任何符号来表示无序列表中的项:
 
 ```markdown
--   一项内容
+- 一项内容
 
-*   一项内容
+* 一项内容
 
--   一项内容
+- 一项内容
 ```
 
 例如:
 
 ```markdown
--   Lorem ipsum dolor sit amet
--   Consectetur adipiscing elit
--   Integer molestie lorem at massa
--   Facilisis in pretium nisl aliquet
--   Nulla volutpat aliquam velit
-    -   Phasellus iaculis neque
-    -   Purus sodales ultricies
-    -   Vestibulum laoreet porttitor sem
-    -   Ac tristique libero volutpat at
--   Faucibus porta lacus fringilla vel
--   Aenean sit amet erat nunc
--   Eget porttitor lorem
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Integer molestie lorem at massa
+- Facilisis in pretium nisl aliquet
+- Nulla volutpat aliquam velit
+  - Phasellus iaculis neque
+  - Purus sodales ultricies
+  - Vestibulum laoreet porttitor sem
+  - Ac tristique libero volutpat at
+- Faucibus porta lacus fringilla vel
+- Aenean sit amet erat nunc
+- Eget porttitor lorem
 ```
 
 呈现的输出效果如下:
 
--   Lorem ipsum dolor sit amet
--   Consectetur adipiscing elit
--   Integer molestie lorem at massa
--   Facilisis in pretium nisl aliquet
--   Nulla volutpat aliquam velit
-    -   Phasellus iaculis neque
-    -   Purus sodales ultricies
-    -   Vestibulum laoreet porttitor sem
-    -   Ac tristique libero volutpat at
--   Faucibus porta lacus fringilla vel
--   Aenean sit amet erat nunc
--   Eget porttitor lorem
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Integer molestie lorem at massa
+- Facilisis in pretium nisl aliquet
+- Nulla volutpat aliquam velit
+  - Phasellus iaculis neque
+  - Purus sodales ultricies
+  - Vestibulum laoreet porttitor sem
+  - Ac tristique libero volutpat at
+- Faucibus porta lacus fringilla vel
+- Aenean sit amet erat nunc
+- Eget porttitor lorem
 
 输出的 HTML 看起来像这样:
 
 ```html
 <ul>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>Integer molestie lorem at massa</li>
-    <li>Facilisis in pretium nisl aliquet</li>
-    <li>
-        Nulla volutpat aliquam velit
-        <ul>
-            <li>Phasellus iaculis neque</li>
-            <li>Purus sodales ultricies</li>
-            <li>Vestibulum laoreet porttitor sem</li>
-            <li>Ac tristique libero volutpat at</li>
-        </ul>
-    </li>
-    <li>Faucibus porta lacus fringilla vel</li>
-    <li>Aenean sit amet erat nunc</li>
-    <li>Eget porttitor lorem</li>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>
+    Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
 </ul>
 ```
 
@@ -312,14 +312,14 @@ _渲染为斜体_
 
 ```html
 <ol>
-    <li>Lorem ipsum dolor sit amet</li>
-    <li>Consectetur adipiscing elit</li>
-    <li>Integer molestie lorem at massa</li>
-    <li>Facilisis in pretium nisl aliquet</li>
-    <li>Nulla volutpat aliquam velit</li>
-    <li>Faucibus porta lacus fringilla vel</li>
-    <li>Aenean sit amet erat nunc</li>
-    <li>Eget porttitor lorem</li>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>Nulla volutpat aliquam velit</li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
 </ol>
 ```
 
@@ -355,16 +355,16 @@ _渲染为斜体_
 要创建任务列表, 请在任务列表项之前添加破折号 (`-`) 和带有空格的方括号 (`[ ]`). 要选择一个复选框，请在方括号之间添加 x (`[x]`).
 
 ```markdown
--   [x] Write the press release
--   [ ] Update the website
--   [ ] Contact the media
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 ```
 
 呈现的输出效果如下:
 
--   [x] Write the press release
--   [ ] Update the website
--   [ ] Contact the media
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
 
 ## 9 代码
 
@@ -523,26 +523,26 @@ grunt.initConfig({
 
 ```html
 <table>
-    <thead>
-        <tr>
-            <th>Option</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>data</td>
-            <td>path to data files to supply the data that will be passed into templates.</td>
-        </tr>
-        <tr>
-            <td>engine</td>
-            <td>engine to be used for processing templates. Handlebars is the default.</td>
-        </tr>
-        <tr>
-            <td>ext</td>
-            <td>extension to be used for dest files.</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data</td>
+      <td>path to data files to supply the data that will be passed into templates.</td>
+    </tr>
+    <tr>
+      <td>engine</td>
+      <td>engine to be used for processing templates. Handlebars is the default.</td>
+    </tr>
+    <tr>
+      <td>ext</td>
+      <td>extension to be used for dest files.</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -618,9 +618,9 @@ grunt.initConfig({
 ```markdown
 ## Table of Contents
 
--   [Chapter 1](#chapter-1)
--   [Chapter 2](#chapter-2)
--   [Chapter 3](#chapter-3)
+- [Chapter 1](#chapter-1)
+- [Chapter 2](#chapter-2)
+- [Chapter 3](#chapter-3)
 ```
 
 将跳转到这些部分:
