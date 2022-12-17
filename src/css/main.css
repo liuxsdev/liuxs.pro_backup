@@ -13,3 +13,9 @@
   src: url(/font/DINPro-Medium.woff2);
   font-display: swap;
 }
+
+@font-face {
+  font-family: "CascadiaMono";
+  src: local("Cascadia Mono Regular"), url(/font/CascadiaMono.woff2);
+  font-display: swap;
+}
