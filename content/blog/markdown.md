@@ -3,712 +3,93 @@ title = "Markdown 基本语法"
 date = 2019-11-27
 +++
 
-# 标题
+# 1 段落
 
-从 `h2` 到 `h6` 的标题在每个级别上都加上一个 `＃`:
+永和[^1]九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹，又有清流激湍，映带左右，引以为流觞曲水，列坐其次。虽无丝竹管弦之盛，一觞一咏，亦足以畅叙幽情。
 
-```markdown
-## h2 标题
+是日也，天朗气清，惠风和畅。仰观宇宙之大，俯察品类之盛，所以游目骋怀，足以极视听之娱，信可乐也。
 
-### h3 标题
+夫人之相与，俯仰一世。或取诸怀抱，悟言一室之内；或因寄所托，放浪形骸之外。虽趣舍万殊，静躁不同，当其欣于所遇，暂得于己，快然自足，不知老之将至；及其所之既倦，情随事迁，感慨系之矣。向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀，况修短随化，终期于尽！古人云：“死生亦大矣。”岂不痛哉！
 
-#### h4 标题
+每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。后之视今，亦犹今之视昔，悲夫！故列叙时人，录其所述，虽世殊事异，所以兴怀，其致一也。后之览者，亦将有感于斯文。
 
-##### h5 标题
+# 2 行内样式
 
-###### h6 标题
-```
+**强调** | _斜体_ | **_强调和斜体_** | `行间代码code` | <u>下划线</u> | ~~删除线~~
 
----
+# 3 引用
 
-## 2 注释
+> 《兰亭集序》，又题为《临河序》、《禊帖》、《三月三日兰亭诗序》等。晋穆帝永和九年（公元 353）三月三日，时任会稽内史的王羲之与友人谢安、孙绰等四十一人会聚兰亭，赋诗饮酒。王羲之将诸人名爵及所赋诗作编成一集，并作序一篇，记述流觞曲水一事，并抒写由此而引发的内心感慨。这篇序文就是《兰亭集序》。此序受石崇《金谷诗序》影响很大，其成就又远在《金谷诗序》之上。
 
-注释是和 HTML 兼容的：
+## 嵌套引用
 
-```html
-<!--
-这是一段注释
--->
-```
-
-**不能**看到以下的注释:
-
-<!--
-这是一段注释
--->
-
----
-
-## 3 水平线
-
-HTML 中的 `<hr>` 标签是用来在段落元素之间创建一个 "专题间隔" 的.
-使用 Markdown, 你可以用以下方式创建一个 `<hr>` 标签:
-
-- `___`: 三个连续的下划线
-- `---`: 三个连续的破折号
-- `***`: 三个连续的星号
-
-呈现的输出效果如下:
-
----
-
----
-
----
-
-## 4 段落
-
-按照纯文本的方式书写段落, 纯文本在呈现的 HTML 中将用 `<p>`/`</p>` 标签包裹.
-
-如下段落:
-
-Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri,
-animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex,
-soluta officiis concludaturque ei qui, vide sensibus vim ad.
-
-可以使用一个空白行进行**换行**.
-
-## 5 内联 HTML 元素
-
-如果你需要某个 HTML 标签 (带有一个类), 则可以简单地像这样使用:
-
-```html
-Markdown 格式的段落.
-
-<div class="class">这是 <b>HTML</b></div>
-
-Markdown 格式的段落.
-```
-
-Markdown 格式的段落.
-
-<div class="class">这是 <b>HTML</b></div>
-
-Markdown 格式的段落.
-
----
-
-## 6 强调
-
-### 加粗
-
-用于强调带有较粗字体的文本片段.
-
-以下文本片段会被 **渲染为粗体**.
-
-```markdown
-**渲染为粗体**
-```
-
-输出的 HTML 看起来像这样:
-
-```html
-<strong>渲染为粗体</strong>
-```
-
-### 斜体
-
-用于强调带有斜体的文本片段.
-
-以下文本片段被 _渲染为斜体_.
-
-```markdown
-_渲染为斜体_
-```
-
-输出的 HTML 看起来像这样:
-
-```html
-<em>渲染为斜体</em>
-```
-
-### 删除线
-
-按照 [GitHub flavored Markdown](https://github.github.com/gfm/) 你可以使用删除线.
-
-```markdown
-~~这段文本带有删除线.~~
-```
-
-呈现的输出效果如下:
-
-~~这段文本带有删除线.~~
-
-输出的 HTML 看起来像这样:
-
-```html
-<del>这段文本带有删除线.</del>
-```
-
-### 组合
-
-加粗, 斜体, 和删除线可以 组合使用.
-
-```markdown
-**_加粗和斜体_**
-~~**删除线和加粗**~~
-~~_删除线和斜体_~~
-~~**_加粗, 斜体和删除线_**~~
-```
-
-呈现的输出效果如下:
-
-**_加粗和斜体_**
-
-~~**删除线和加粗**~~
-
-~~_删除线和斜体_~~
-
-~~**_加粗, 斜体和删除线_**~~
-
-输出的 HTML 看起来像这样:
-
-```html
-<em><strong>加粗和斜体</strong></em>
-<del><strong>删除线和加粗</strong></del>
-<del><em>删除线和斜体</em></del>
-<del
-  ><em><strong>加粗, 斜体和删除线</strong></em></del
+> 文章首先记述了集会的时间、地点及与会人物，言简意赅。接着描绘兰亭所处的自然环境和周围景物，语言简洁而层次井然。描写景物，从大处落笔，由远及近，转而由近及远，推向无限。先写崇山峻岭，渐写清流激湍，再顺流而下转写人物活动及其情态，动静结合。然后再补写自然物色，由晴朗的碧空和轻扬的春风，自然地推向寥廓的宇宙及大千世界中的万物。意境清丽淡雅，情调欢快畅达。兰亭宴集，真可谓“四美俱，二难并”。
 >
-```
+> > 第一至第二自然段，记叙了集会的时间、地点、事由、人物，由“此地有崇山峻岭”引出四周环境及场面的铺叙，最后由“是日也”领起描写游人的心境，抒发集会的心情。本文第一、二自然段作者对这次宴集环境的描述素淡雅致，摄其神韵，天朗气清，惠风和畅，这些都看出作者快乐的心情和对自然美的热爱之情。
+> > 用于在文档中引用其他来源的内容块.
 
-## 7 引用
+# 4 列表
 
-用于在文档中引用其他来源的内容块.
-
-在要引用的任何文本之前添加 `>`:
-
-```markdown
-> **Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
-```
-
-呈现的输出效果如下:
-
-> **Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
-
-输出的 HTML 看起来像这样:
-
-```html
-<blockquote>
-  <p>
-    <strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a
-    single logical volume with the space of both drives combined.
-  </p>
-</blockquote>
-```
-
-引用也可以嵌套:
-
-```markdown
-> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
-> Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
->
-> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
-> > odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
-```
-
-呈现的输出效果如下:
-
-> Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
-> Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
->
-> > Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
-> > odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
-
-## 8 列表
-
-### 无序列表
-
-一系列项的列表, 其中项的顺序没有明显关系.
-
-你可以使用以下任何符号来表示无序列表中的项:
-
-```markdown
-- 一项内容
-
-* 一项内容
-
-- 一项内容
-```
-
-例如:
-
-```markdown
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Integer molestie lorem at massa
-- Facilisis in pretium nisl aliquet
-- Nulla volutpat aliquam velit
-  - Phasellus iaculis neque
-  - Purus sodales ultricies
-  - Vestibulum laoreet porttitor sem
-  - Ac tristique libero volutpat at
-- Faucibus porta lacus fringilla vel
-- Aenean sit amet erat nunc
-- Eget porttitor lorem
-```
-
-呈现的输出效果如下:
+## 无序列表
 
 - Lorem ipsum dolor sit amet
 - Consectetur adipiscing elit
 - Integer molestie lorem at massa
-- Facilisis in pretium nisl aliquet
-- Nulla volutpat aliquam velit
-  - Phasellus iaculis neque
-  - Purus sodales ultricies
-  - Vestibulum laoreet porttitor sem
-  - Ac tristique libero volutpat at
-- Faucibus porta lacus fringilla vel
-- Aenean sit amet erat nunc
-- Eget porttitor lorem
 
-输出的 HTML 看起来像这样:
-
-```html
-<ul>
-  <li>Lorem ipsum dolor sit amet</li>
-  <li>Consectetur adipiscing elit</li>
-  <li>Integer molestie lorem at massa</li>
-  <li>Facilisis in pretium nisl aliquet</li>
-  <li>
-    Nulla volutpat aliquam velit
-    <ul>
-      <li>Phasellus iaculis neque</li>
-      <li>Purus sodales ultricies</li>
-      <li>Vestibulum laoreet porttitor sem</li>
-      <li>Ac tristique libero volutpat at</li>
-    </ul>
-  </li>
-  <li>Faucibus porta lacus fringilla vel</li>
-  <li>Aenean sit amet erat nunc</li>
-  <li>Eget porttitor lorem</li>
-</ul>
-```
-
-### 有序列表
-
-一系列项的列表, 其中项的顺序确实很重要.
-
-```markdown
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-4. Facilisis in pretium nisl aliquet
-5. Nulla volutpat aliquam velit
-6. Faucibus porta lacus fringilla vel
-7. Aenean sit amet erat nunc
-8. Eget porttitor lorem
-```
-
-呈现的输出效果如下:
+## 有序列表
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-4. Facilisis in pretium nisl aliquet
-5. Nulla volutpat aliquam velit
-6. Faucibus porta lacus fringilla vel
-7. Aenean sit amet erat nunc
-8. Eget porttitor lorem
 
-输出的 HTML 看起来像这样:
-
-```html
-<ol>
-  <li>Lorem ipsum dolor sit amet</li>
-  <li>Consectetur adipiscing elit</li>
-  <li>Integer molestie lorem at massa</li>
-  <li>Facilisis in pretium nisl aliquet</li>
-  <li>Nulla volutpat aliquam velit</li>
-  <li>Faucibus porta lacus fringilla vel</li>
-  <li>Aenean sit amet erat nunc</li>
-  <li>Eget porttitor lorem</li>
-</ol>
-```
-
-{{< admonition tip >}}
-如果你对每一项使用 `1.`, Markdown 将自动为每一项编号. 例如:
-
-```markdown
-1. Lorem ipsum dolor sit amet
-1. Consectetur adipiscing elit
-1. Integer molestie lorem at massa
-1. Facilisis in pretium nisl aliquet
-1. Nulla volutpat aliquam velit
-1. Faucibus porta lacus fringilla vel
-1. Aenean sit amet erat nunc
-1. Eget porttitor lorem
-```
-
-呈现的输出效果如下:
-
-1. Lorem ipsum dolor sit amet
-1. Consectetur adipiscing elit
-1. Integer molestie lorem at massa
-1. Facilisis in pretium nisl aliquet
-1. Nulla volutpat aliquam velit
-1. Faucibus porta lacus fringilla vel
-1. Aenean sit amet erat nunc
-1. Eget porttitor lorem
-   {{< /admonition >}}
-
-### 任务列表
-
-任务列表使你可以创建带有复选框的列表.
-要创建任务列表, 请在任务列表项之前添加破折号 (`-`) 和带有空格的方括号 (`[ ]`). 要选择一个复选框，请在方括号之间添加 x (`[x]`).
-
-```markdown
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-```
-
-呈现的输出效果如下:
+## 任务列表
 
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
 
-## 9 代码
+# 5 代码
 
-### 行内代码
+## 缩进代码
 
-用 <code>`</code> 包装行内代码段.
-
-```markdown
-在这个例子中, `<section></section>` 会被包裹成 **代码**.
-```
-
-呈现的输出效果如下:
-
-在这个例子中, `<section></section>` 会被包裹成 **代码**.
-
-输出的 HTML 看起来像这样:
-
-```html
-<p>在这个例子中, <code>&lt;section&gt;&lt;/section&gt;</code> 会被包裹成 <strong>代码</strong>.</p>
-```
-
-### 缩进代码
-
-将几行代码缩进至少四个空格，例如:
-
-```markdown
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-```
-
-呈现的输出效果如下:
-
-    // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
 
-输出的 HTML 看起来像这样:
+## 代码块
 
-```html
-<pre>
-  <code>
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-  </code>
-</pre>
-```
-
-### 围栏代码块
-
-使用 "围栏" <code>```</code> 来生成一段带有语言属性的代码块.
-
-{{< highlight markdown >}}
-
-```markdown
-Sample text here...
-```
-
-{{< / highlight >}}
-
-输出的 HTML 看起来像这样:
-
-```html
-<pre language-html>
-  <code>Sample text here...</code>
-</pre>
-```
-
-### 语法高亮
-
-[GFM]^(GitHub Flavored Markdown) 也支持语法高亮.
-
-要激活它，只需在第一个代码 "围栏" 之后直接添加你要使用的语言的文件扩展名,
-<code>```js</code>, 语法高亮显示将自动应用于渲染的 HTML 中.
-
-例如, 在以下 JavaScript 代码中应用语法高亮:
-
-{{< highlight markdown >}}
-
-```js
-grunt.initConfig({
-  assemble: {
-    options: {
-      assets: 'docs/assets',
-      data: 'src/data/*.{json,yml}',
-      helpers: 'src/custom-helpers.js',
-      partials: ['src/partials/**/*.{hbs,md}']
+```javascript
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+module.exports = {
+  content: ["./templates/**/*.html"],
+  theme: {
+    fontFamily: {
+      ubuntu: ["ubuntu", ...defaultTheme.fontFamily.sans],
+      din: ["din", ...defaultTheme.fontFamily.sans],
+      serif: [...defaultTheme.fontFamily.serif],
+      sans: ["din", defaultTheme.fontFamily.sans],
+      mono: ["CascadiaMono", ...defaultTheme.fontFamily.mono],
     },
-    pages: {
-      options: {
-        layout: 'default.hbs'
-      },
-      files: {
-        './': ['src/templates/pages/index.hbs']
-      }
-    }
-  }
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/typography")],
+  darkMode: "class",
 };
 ```
 
-{{< / highlight >}}
+# 6 表格
 
-呈现的输出效果如下:
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ | :-------------: | ------------: |
+| col 3 is      | some wordy text |         $1600 |
+| col 2 is      |    centered     |           $12 |
+| zebra stripes |    are neat     |            $1 |
 
-```js
-grunt.initConfig({
-  assemble: {
-    options: {
-      assets: 'docs/assets',
-      data: 'src/data/*.{json,yml}',
-      helpers: 'src/custom-helpers.js',
-      partials: ['src/partials/**/*.{hbs,md}']
-    },
-    pages: {
-      options: {
-        layout: 'default.hbs'
-      },
-      files: {
-        './': ['src/templates/pages/index.hbs']
-      }
-    }
-  }
-};
-```
+# 7 图片
 
-{{< admonition >}}
-**Hugo** 文档中的 [语法高亮页面](https://gohugo.io/content-management/syntax-highlighting/) 介绍了有关语法高亮的更多信息,
-包括语法高亮的 shortcode.
-{{< /admonition >}}
+![img](https://picsum.photos/600/400/?random)
 
-## 10 表格
+---
 
-通过在每个单元格之间添加竖线作为分隔线, 并在标题下添加一行破折号 (也由竖线分隔) 来创建表格. 注意, 竖线不需要垂直对齐.
-
-```markdown
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-```
-
-呈现的输出效果如下:
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-输出的 HTML 看起来像这样:
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th>Option</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>data</td>
-      <td>path to data files to supply the data that will be passed into templates.</td>
-    </tr>
-    <tr>
-      <td>engine</td>
-      <td>engine to be used for processing templates. Handlebars is the default.</td>
-    </tr>
-    <tr>
-      <td>ext</td>
-      <td>extension to be used for dest files.</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-{{< admonition note "文本右对齐或居中对齐" >}}
-在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐.
-
-在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中.
-
-```markdown
-| Option |                                                               Description |
-| :----: | ------------------------------------------------------------------------: |
-|  data  | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|  ext   |                                      extension to be used for dest files. |
-```
-
-呈现的输出效果如下:
-
-| Option |                                                               Description |
-| :----: | ------------------------------------------------------------------------: |
-|  data  | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|  ext   |                                      extension to be used for dest files. |
-
-{{< /admonition >}}
-
-## 11 链接 {#links}
-
-### 基本链接
-
-```markdown
-<https://assemble.io>
-<contact@revolunet.com>
-[Assemble](https://assemble.io)
-```
-
-呈现的输出效果如下 (将鼠标悬停在链接上，没有提示):
-
-<https://assemble.io>
-
-<contact@revolunet.com>
-
-[Assemble](https://assemble.io)
-
-输出的 HTML 看起来像这样:
-
-```html
-<a href="https://assemble.io">https://assemble.io</a>
-<a href="mailto:contact@revolunet.com">contact@revolunet.com</a>
-<a href="https://assemble.io">Assemble</a>
-```
-
-### 添加一个标题
-
-```markdown
-[Upstage](https://github.com/upstage/ "Visit Upstage!")
-```
-
-呈现的输出效果如下 (将鼠标悬停在链接上，会有一行提示):
-
-[Upstage](https://github.com/upstage/ "Visit Upstage!")
-
-输出的 HTML 看起来像这样:
-
-```html
-<a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
-```
-
-### 定位标记
-
-定位标记使你可以跳至同一页面上的指定锚点. 例如, 每个章节:
-
-```markdown
-## Table of Contents
-
-- [Chapter 1](#chapter-1)
-- [Chapter 2](#chapter-2)
-- [Chapter 3](#chapter-3)
-```
-
-将跳转到这些部分:
-
-```markdown
-## Chapter 1 <a id="chapter-1"></a>
-
-Content for chapter one.
-
-## Chapter 2 <a id="chapter-2"></a>
-
-Content for chapter one.
-
-## Chapter 3 <a id="chapter-3"></a>
-
-Content for chapter one.
-```
-
-{{< admonition >}}
-定位标记的位置几乎是任意的. 因为它们并不引人注目, 所以它们通常被放在同一行了.
-{{< /admonition >}}
-
-## 12 脚注
-
-脚注使你可以添加注释和参考, 而不会使文档正文混乱.
-当你创建脚注时, 会在添加脚注引用的位置出现带有链接的上标编号.
-读者可以单击链接以跳至页面底部的脚注内容.
-
-要创建脚注引用, 请在方括号中添加插入符号和标识符 (`[^1]`).
-标识符可以是数字或单词, 但不能包含空格或制表符.
-标识符仅将脚注引用与脚注本身相关联 - 在脚注输出中, 脚注按顺序编号.
-
-在中括号内使用插入符号和数字以及用冒号和文本来添加脚注内容 (`[^1]：这是一段脚注`).
-你不一定要在文档末尾添加脚注. 可以将它们放在除列表, 引用和表格等元素之外的任何位置.
-
-```markdown
-这是一个数字脚注[^1].
-这是一个带标签的脚注[^label]
-
-[^1]: 这是一个数字脚注
-[^label]: 这是一个带标签的脚注
-```
-
-这是一个数字脚注[^1].
-
-这是一个带标签的脚注[^label]
-
-[^1]: 这是一个数字脚注
-[^label]: 这是一个带标签的脚注
-
-## 13 图片
-
-图片的语法与链接相似, 但包含一个在前面的感叹号.
-
-```markdown
-![Minion](https://octodex.github.com/images/minion.png)
-```
-
-![Minion](https://octodex.github.com/images/minion.png)
-
-或者:
-
-```markdown
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-```
-
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-像链接一样, 图片也具有脚注样式的语法:
-
-```markdown
-![Alt text][id]
-```
-
-![Alt text][id]
-
-稍后在文档中提供参考内容, 用来定义 URL 的位置:
-
-```markdown
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
-```
-
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
-
-{{< admonition tip >}}
-**LoveIt** 主题提供了一个包含更多功能的 [图片的 shortcode](../theme-documentation-extended-shortcodes#image).
-{{< /admonition >}}
+[^1]: 永和：东晋皇帝司马聃（晋穆帝）的年号，从公元 345—356 年共 12 年。永和九年上巳节，王羲之与谢安，孙绰等 41 人。举行禊礼，饮酒赋诗，事后将作品结为一集，由王羲之写了这篇序总述其事。

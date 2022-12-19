@@ -10,7 +10,24 @@ module.exports = {
       sans: ["din", defaultTheme.fontFamily.sans],
       mono: ["CascadiaMono", ...defaultTheme.fontFamily.mono],
     },
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": { content: '""' },
+            "code::after": { content: '""' },
+            code: {
+              border: "1px solid #ccc",
+              "border-radius": "0.375rem",
+              padding: "0.25rem",
+            },
+            blockquote: {
+              "font-style": "normal",
+            },
+          },
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
   darkMode: "class",

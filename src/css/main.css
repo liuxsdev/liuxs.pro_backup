@@ -19,3 +19,9 @@
   src: local("Cascadia Mono Regular"), url(/font/CascadiaMono.woff2);
   font-display: swap;
 }
+
+@layer components {
+  .lightsnow-typography {
+    @apply prose-h1:mb-6 prose-h1:text-2xl prose-h2:text-xl prose-h2:mb-4 prose-headings:my-0 prose-headings:text-gray-800 prose-h3:border-l-8 prose-h3:pl-2 prose-blockquote:text-gray-100 prose-p:text-gray-800 prose-pre:text-base prose-pre:font-mono;
+  }
+}
