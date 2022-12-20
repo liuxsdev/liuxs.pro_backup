@@ -6,7 +6,7 @@ module.exports = {
     fontFamily: {
       ubuntu: ["ubuntu", ...defaultTheme.fontFamily.sans],
       din: ["din", ...defaultTheme.fontFamily.sans],
-      serif: [...defaultTheme.fontFamily.serif],
+      serif: ["宋体", ...defaultTheme.fontFamily.serif],
       sans: ["din", defaultTheme.fontFamily.sans],
       mono: ["CascadiaMono", ...defaultTheme.fontFamily.mono],
     },
