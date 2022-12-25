@@ -32,7 +32,21 @@
   prose-p:text-gray-900
     prose-pre:font-mono
     prose-pre:text-base
-    [&_p]:prose-blockquote:text-gray-500
+    [&_div[class="footnote-definition"]]:flex
+    [&_div[class="footnote-definition"]]:items-start
+    [&_div[class="footnote-definition"]]:text-sm
+    [&_div[class="footnote-definition"]]:mb-2
+    [&_div[class="footnote-definition"]_sup]:inset-0
+    [&_div[class="footnote-definition"]_sup]:text-sm
+    [&_div[class="footnote-definition"]_sup]:mr-2
+    [&_div[class="footnote-definition"]_sup]:after:content-[':']
+    [&_div[class="footnote-definition"]_p]:m-0
+    [&_sup[class="footnote-reference"]_a]:mr-1
+    [&_sup[class="footnote-reference"]_a]:after:content-['_↗']
+  [&_sup[class="footnote-reference"]_a]:decoration-blue-500
+    [&_sup[class="footnote-reference"]_a]:decoration-2
+    [&_sup[class="footnote-reference"]_a]:text-blue-500
+  [&_p]:prose-blockquote:text-gray-500
     [&_p]:prose-blockquote:text-sm;
   }
 }

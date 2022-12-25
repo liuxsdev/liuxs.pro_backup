@@ -61,4 +61,5 @@ alert("Sum = " + sum); // "+" means combine into a string
 ```
 
 [^1]: From [https://www.lipsum.com/](https://www.lipsum.com/)
+
 [^2]: From [https://en.wikipedia.org/wiki/Apple](https://en.wikipedia.org/wiki/Apple)
