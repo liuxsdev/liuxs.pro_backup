@@ -27,9 +27,9 @@
     prose-h2:text-xl
     prose-h2:mb-4
     prose-headings:my-0 
-  prose-headings:text-gray-800 
+    prose-headings:text-gray-800 
     prose-h3:border-l-8 prose-h3:pl-2
-  prose-p:text-gray-900
+    prose-p:text-gray-900
     prose-pre:font-mono
     prose-pre:text-base
     [&_div[class="footnote-definition"]]:flex
@@ -41,12 +41,14 @@
     [&_div[class="footnote-definition"]_sup]:mr-2
     [&_div[class="footnote-definition"]_sup]:after:content-[':']
     [&_div[class="footnote-definition"]_p]:m-0
+    [&_div[class="footnote-definition"]:nth-of-type(1)]:pt-6
+    [&_div[class="footnote-definition"]:nth-of-type(1)]:border-t
     [&_sup[class="footnote-reference"]_a]:mr-1
     [&_sup[class="footnote-reference"]_a]:after:content-['_↗']
-  [&_sup[class="footnote-reference"]_a]:decoration-blue-500
+    [&_sup[class="footnote-reference"]_a]:decoration-blue-500
     [&_sup[class="footnote-reference"]_a]:decoration-2
     [&_sup[class="footnote-reference"]_a]:text-blue-500
-  [&_p]:prose-blockquote:text-gray-500
+    [&_p]:prose-blockquote:text-gray-500
     [&_p]:prose-blockquote:text-sm;
   }
 }
