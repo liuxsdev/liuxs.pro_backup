@@ -36,7 +36,7 @@
   <aside id="toc" class="hidden lg:block lg:fixed lg:top-36 lg:right-20 text-gray-700">
     <div>
       <div class="py-2">目录</div>
-      <ul class="border-l-4 pl-2">
+      <ul class="border-l-4 pl-2 text-sm">
         {% for h1 in page.toc %}
           <li>
             <a href="{{ h1.permalink|safe }}" class="hover:underline hover:font-semibold hover:text-blue-500">{{ h1.title }}</a>

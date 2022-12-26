@@ -31,24 +31,52 @@
     prose-h3:border-l-8 prose-h3:pl-2
     prose-p:text-gray-900
     prose-pre:font-mono
-    prose-pre:text-base
-    [&_div[class="footnote-definition"]]:flex
-    [&_div[class="footnote-definition"]]:items-start
-    [&_div[class="footnote-definition"]]:text-sm
-    [&_div[class="footnote-definition"]]:mb-2
-    [&_div[class="footnote-definition"]_sup]:inset-0
-    [&_div[class="footnote-definition"]_sup]:text-sm
-    [&_div[class="footnote-definition"]_sup]:mr-2
-    [&_div[class="footnote-definition"]_sup]:after:content-[':']
-    [&_div[class="footnote-definition"]_p]:m-0
-    [&_div[class="footnote-definition"]:nth-of-type(1)]:pt-6
-    [&_div[class="footnote-definition"]:nth-of-type(1)]:border-t
-    [&_sup[class="footnote-reference"]_a]:mr-1
-    [&_sup[class="footnote-reference"]_a]:after:content-['_↗']
-    [&_sup[class="footnote-reference"]_a]:decoration-blue-500
-    [&_sup[class="footnote-reference"]_a]:decoration-2
-    [&_sup[class="footnote-reference"]_a]:text-blue-500
-    [&_p]:prose-blockquote:text-gray-500
-    [&_p]:prose-blockquote:text-sm;
+    prose-pre:text-base;
   }
+}
+
+/* footnote */
+sup[class="footnote-reference"] a {
+  @apply mr-1 after:content-['_↗'] decoration-blue-500 decoration-2 text-blue-500;
+}
+
+div.footnote-definition {
+  @apply flex items-start text-sm mb-2;
+}
+
+div.footnote-definition:nth-of-type(1) {
+  @apply pt-6 border-t;
+}
+
+div.footnote-definition sup {
+  @apply inset-0 text-sm mr-2 after:content-[':'];
+}
+
+div.footnote-definition p {
+  @apply m-0;
+}
+
+/* blockquote */
+blockquote p {
+  @apply text-green-500 text-sm not-italic;
+}
+
+/* code */
+p code {
+  @apply border border-gray-500 p-1 rounded-md;
+}
+
+code::before,
+code::after {
+  content: "" !important;
+}
+
+/* image */
+.lightsnow-typography p img {
+  width: 100%;
+}
+
+/* checked */
+input[type="checkbox"] {
+  @apply m-1;
 }
