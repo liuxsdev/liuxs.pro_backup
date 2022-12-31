@@ -27,9 +27,8 @@
     prose-h2:text-xl
     prose-h2:mb-4
     prose-headings:my-0 
-    prose-headings:text-gray-800 
     prose-h3:border-l-8 prose-h3:pl-2
-    prose-p:text-gray-900
+    [&dark:prose-p]:text-gray-300
     prose-pre:font-mono
     prose-pre:text-base;
   }
@@ -58,7 +57,7 @@ div.footnote-definition p {
 
 /* blockquote */
 blockquote p {
-  @apply text-green-500 text-sm not-italic;
+  @apply text-gray-500 text-sm not-italic dark:text-gray-400;
 }
 
 /* code */

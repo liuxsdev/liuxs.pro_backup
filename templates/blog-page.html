@@ -29,14 +29,14 @@
       </div>
 
       <div class="flex flex-col items-start">
-        <div id="content" class="prose prose-base max-w-full lightsnow-typography">{{ page.content|safe }}</div>
+        <div id="content" class="prose prose-base max-w-full lightsnow-typography dark:prose-invert">{{ page.content|safe }}</div>
       </div>
     </div>
   </article>
   <aside id="toc" class="hidden lg:block lg:fixed lg:top-36 lg:right-20 text-gray-700">
     <div>
-      <div class="py-2">目录</div>
-      <ul class="border-l-4 pl-2 text-sm">
+      <div class="py-2 dark:text-gray-400">目录</div>
+      <ul class="border-l-4 pl-2 text-sm dark:border-gray-500 dark:text-gray-400">
         {% for h1 in page.toc %}
           <li>
             <a href="{{ h1.permalink|safe }}" class="hover:underline hover:font-semibold hover:text-blue-500">{{ h1.title }}</a>

@@ -2,7 +2,6 @@
 
 {% block content %}
   <h1 class="text-lg my-4 font-ubuntu">{{ section.title }}</h1>
-  <div class=""></div>
   <hr />
   <div>
     {% for year, pages in section.pages|group_by(attribute = 'year') %}
@@ -12,7 +11,7 @@
           {% for page in pages %}
             <div class="p-2 border-b border-dashed border-gray-300">
               <a href="{{ page.permalink }}" class="flex justify-between items-center py-2">
-                <span class="font-din text-gray-700 text-sm hover:text-gray-900 hover:font-semibold sm:text-base">{{ page.title }}</span>
+                <span class="font-din text-gray-700 text-sm hover:text-gray-900 hover:font-semibold sm:text-base dark:text-cyan-300">{{ page.title }}</span>
                 <span class="shrink-0 text-sm text-gray-600 font-light font-din">{{ page.date|date(format = '%Y / %m / %d') }}</span>
               </a>
             </div>
