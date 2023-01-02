@@ -11,15 +11,17 @@
   <body>
     <div class="flex flex-col h-screen bg-slate-50 overflow-y-auto dark:bg-gray-600">
       <header>
-        <nav class="flex items-center px-8 py-6 bg-slate-50 justify-between shadow-sm shadow-slate-300 dark:bg-gray-600 dark:shadow-slate-700">
+        <nav class="flex items-center px-4 lg:px-8 py-4 bg-slate-50 justify-between shadow-sm shadow-slate-300 dark:bg-gray-600 dark:shadow-slate-700">
           <div class="font-semibold text-cyan-900 mx-4 font-din dark:text-cyan-300">
             <a href="/">{{ config.title }}</a>
           </div>
-          <div id="menu" class="flex gap-2 pr-8">
+          <div id="menu" class="flex lg:pr-8">
             <ul class="flex items-center space-x-4 mx-4">
-              <li>
-                <a href="/" class="text-cyan-900 dark:text-cyan-300">主页</a>
-              </li>
+              {% for menu_item in config.extra.menu %}
+                <li>
+                  <a href="{{ menu_item.link }}" class="text-cyan-900 dark:text-cyan-300">{{ menu_item.name }}</a>
+                </li>
+              {% endfor %}
             </ul>
             <div id="btn-toggle">
               <div class="inline dark:hidden">
