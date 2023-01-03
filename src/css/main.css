@@ -30,7 +30,10 @@
     prose-h3:border-l-8 prose-h3:pl-2
     [&dark:prose-p]:text-gray-300
     prose-pre:font-mono
-    prose-pre:text-base;
+    prose-pre:text-base
+    prose-code:font-normal
+    prose-code:text-orange-600
+    dark:prose-code:text-orange-300;
   }
 }
 
@@ -62,7 +65,7 @@ blockquote p {
 
 /* code */
 p code {
-  @apply border border-gray-500 p-1 rounded-md;
+  @apply p-1 rounded-md bg-gray-900/10 mx-1 dark:bg-gray-100/20;
 }
 
 code::before,
