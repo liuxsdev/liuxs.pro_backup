@@ -2,10 +2,16 @@
 
 {% block content %}
   <div class="flex items-center justify-center h-full">
-    <article class="font-din shrink-0">
-      This is my blog made with Zola.<p>
-        Click <a href="{{ get_url(path = '@/blog/_index.md') }}" class="text-blue-400">here</a> to see my posts.
-      </p>
-    </article>
+    <div id="profile" class="flex flex-col items-center">
+      <div class="avatar">
+        <div class="w-36 mask mask-squircle">
+          <img src="logo.webp" />
+        </div>
+      </div>
+      <div class="text-lg mt-2">Liu XS</div>
+      <div class="font-din shrink-0">
+        <a href="{{ get_url(path = '@/blog/_index.md') }}" class="block rounded-md text-red-400 bg-slate-300/40 mt-2 px-8 py-2 text-center font-semibold uppercase hover:bg-slate-400/40 dark:text-red-200">Read My Blog</a>
+      </div>
+    </div>
   </div>
 {% endblock %}
