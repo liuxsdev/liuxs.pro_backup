@@ -32,8 +32,17 @@ function toogle_theme() {
   }
 }
 
+function getActiveTocElement() {
+  const toc = document.querySelectorAll("h1");
+  const current = [...toc].filter((item) => item.getBoundingClientRect().y < 0);
+  return current.reverse()[0];
+}
+
 window.onload = function () {
-  apply_theme();
   const btn_toogle_theme = document.querySelector("#btn-toggle");
   btn_toogle_theme.onclick = toogle_theme;
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  apply_theme();
+});

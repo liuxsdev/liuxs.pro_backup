@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/main.js"></script>
-    <title>Light Snow - Theme</title>
+    <title>
+      {% block title %}
+        Light Snow - Theme
+      {% endblock %}
+    </title>
   </head>
   <body>
     <div class="flex flex-col h-screen bg-slate-50 overflow-y-auto dark:bg-gray-600">
@@ -48,15 +52,14 @@
       <footer class="flex justify-center text-xs text-gray-600 dark:text-gray-300">
         <div class="py-2">
           <div class="text-center">
-            <span itemprop="copyrightYear">©2022 liuxs</span>
+            <span itemprop="copyrightYear">© 2022 LIUXS |</span>
             <span>CC-BY-NC-4.0</span>
           </div>
           <div>
             Powered by
             <a href="https://getzola.org/" target="_blank" rel="noopener noreffer" class="text-green-700 hover:underline hover:font-extrabold">Zola</a>
             <span>| Theme -</span>
-            <a href="https://github.com/liuxsdev/LightSnow" target="_blank" rel="noopener noreffer" title="" class="text-sky-600 hover:underline hover:font-extrabold">Light Snow</a>
-            <span>| Code with 🧡 by liuxs</span>
+            <a href="https://github.com/liuxsdev/LightSnow" target="_blank" rel="noopener noreffer" class="text-sky-600 hover:underline hover:font-extrabold">Light Snow</a>
           </div>
         </div>
       </footer>
