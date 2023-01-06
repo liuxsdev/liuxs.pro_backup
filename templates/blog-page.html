@@ -38,23 +38,25 @@
   </article>
   <aside id="toc" class="hidden lg:block lg:fixed lg:top-36 lg:right-20 text-gray-700">
     <div>
-      <div class="py-2 dark:text-gray-400">目录</div>
-      <ul class="border-l-4 pl-2 text-sm dark:border-gray-500 dark:text-gray-400">
-        {% for h1 in page.toc %}
-          <li>
-            <a href="{{ h1.permalink|safe }}" class="hover:underline hover:font-semibold hover:text-blue-500">{{ h1.title }}</a>
-            {% if h1.children %}
-              <ul>
-                {% for h2 in h1.children %}
-                  <li class="pl-3">
-                    <a href="{{ h2.permalink|safe }}" class="hover:underline hover:font-semibold hover:text-blue-500">{{ h2.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      {% if page.toc %}
+        <div class="py-2 dark:text-gray-400">目录</div>
+        <ul class="border-l-4 pl-2 text-sm dark:border-gray-500 dark:text-gray-400">
+          {% for h1 in page.toc %}
+            <li>
+              <a href="{{ h1.permalink|safe }}" class="hover:font-semibold hover:text-blue-500 data-[active=true]:border-b-2 data-[active=true]:border-blue-600 data-[active=true]:text-blue-500" data-active="false">{{ h1.title }}</a>
+              {% if h1.children %}
+                <ul>
+                  {% for h2 in h1.children %}
+                    <li class="pl-3">
+                      <a href="{{ h2.permalink|safe }}" class="hover:underline hover:font-semibold hover:text-blue-500">{{ h2.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   </aside>
 {% endblock %}
