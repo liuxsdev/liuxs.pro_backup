@@ -60,6 +60,10 @@ div.footnote-definition p {
 }
 
 /* blockquote */
+blockquote {
+  @apply dark:border-gray-500;
+}
+
 blockquote p {
   @apply text-gray-500 text-sm not-italic dark:text-gray-400;
 }
@@ -79,7 +83,14 @@ code::after {
   width: 100%;
 }
 
-/* checked */
+ul li::marker {
+  @apply text-gray-400 dark:text-gray-200 !important;
+}
+
+/* 任务列表 */
 input[type="checkbox"] {
-  @apply m-1;
+  @apply m-1 list-outside;
+}
+li:has(input[type="checkbox"]) {
+  list-style-type: none;
 }
