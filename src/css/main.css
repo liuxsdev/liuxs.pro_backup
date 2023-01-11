@@ -48,7 +48,7 @@
 
 /* footnote */
 sup[class="footnote-reference"] a {
-  @apply mr-1 after:content-['_↗'] decoration-blue-500 decoration-2 text-blue-500;
+  @apply mr-1 after:content-['_↗'] decoration-sky-600 decoration-2 text-sky-600 dark:text-sky-300 dark:decoration-sky-300;
 }
 
 div.footnote-definition {
@@ -65,6 +65,10 @@ div.footnote-definition sup {
 
 div.footnote-definition p {
   @apply m-0;
+}
+
+div.footnote-definition p a {
+  @apply text-sky-600 no-underline dark:text-sky-300;
 }
 
 /* blockquote */
@@ -101,4 +105,11 @@ input[type="checkbox"] {
 }
 li:has(input[type="checkbox"]) {
   list-style-type: none;
+}
+
+/* 目录 */
+@layer components {
+  .menu-a {
+    @apply hover:font-semibold hover:text-blue-500 data-[active=true]:border-b-2 data-[active=true]:border-sky-600 data-[active=true]:text-sky-600 dark:data-[active=true]:text-sky-300 dark:data-[active=true]:border-sky-300;
+  }
 }

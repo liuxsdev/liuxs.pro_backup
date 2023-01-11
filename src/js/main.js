@@ -57,6 +57,23 @@ function markToc() {
   current.dataset.active = true;
 }
 
+//给脚注增加返回链接
+function addBackRef() {
+  const ref = document.querySelectorAll("sup.footnote-reference a");
+  const footnote = document.querySelectorAll("div.footnote-definition");
+  ref.forEach((item) => {
+    href = item.getAttribute("href").split("#")[1];
+    item.parentElement.id = "re:" + href;
+  });
+  footnote.forEach((item) => {
+    const id = item.id;
+    let a = document.createElement("a");
+    a.href = "#re:" + id;
+    a.innerHTML = " ↩︎";
+    item.querySelector("p").appendChild(a);
+  });
+}
+
 window.onload = function () {
   const btn_toogle_theme = document.querySelector("#btn-toggle");
   const main_dom = document.querySelector("div#main");
@@ -64,6 +81,7 @@ window.onload = function () {
   main_dom.addEventListener("scroll", () => {
     markToc();
   });
+  addBackRef();
 };
 
 document.addEventListener("DOMContentLoaded", function () {

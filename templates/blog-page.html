@@ -43,7 +43,7 @@
         <ul class="border-l-4 pl-2 text-sm dark:border-gray-500 dark:text-gray-400">
           {% for h1 in page.toc %}
             <li>
-              <a href="{{ h1.permalink|safe }}" class="hover:font-semibold hover:text-blue-500 data-[active=true]:border-b-2 data-[active=true]:border-blue-600 data-[active=true]:text-blue-500" data-active="false">{{ h1.title }}</a>
+              <a href="{{ h1.permalink|safe }}" class="menu-a" data-active="false">{{ h1.title }}</a>
               {% if h1.children %}
                 <ul>
                   {% for h2 in h1.children %}
