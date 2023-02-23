@@ -30,8 +30,9 @@
     prose-h3:border-l-8 prose-h3:pl-2
     prose-pre:font-mono
     prose-pre:text-base
-    prose-p:font-medium
+    prose-p:font-medium 
     prose-p:my-4
+    prose-img:shadow-lg
     prose-code:font-normal
     prose-code:text-orange-600
     dark:prose-code:text-orange-300
@@ -92,7 +93,8 @@ code::after {
 
 /* image */
 .lightsnow-typography p img {
-  width: 100%;
+  max-width: 100%;
+  margin: 0.5rem auto;
 }
 
 ul li::marker {

@@ -18,7 +18,7 @@
     </title>
   </head>
   <body>
-    <div id="main" class="flex flex-col h-screen bg-slate-50 overflow-y-auto dark:bg-gray-600">
+    <div id="main" class="flex flex-col bg-slate-50 dark:bg-gray-600">
       <header>
         <nav class="flex items-center px-4 lg:px-8 py-4 bg-slate-50 justify-between shadow-sm shadow-slate-300 dark:bg-gray-600 dark:shadow-slate-700">
           <div class="font-semibold text-cyan-900 mx-4 font-din dark:text-cyan-300">
@@ -47,7 +47,7 @@
           </div>
         </nav>
       </header>
-      <main class="flex-1 flex justify-center space-x-4">
+      <main class="flex grow shrink-0 justify-center space-x-4">
         <div class="w-11/12 m-4 p-8 sm:w-10/12 lg:w-7/12 dark:text-cyan-300">
           {% block content %}
 

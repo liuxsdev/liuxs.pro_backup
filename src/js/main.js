@@ -45,16 +45,18 @@ function getActiveTocElement() {
 
 function markToc() {
   const activetoc = getActiveTocElement();
-  const id = activetoc.id;
-  toclist = document.querySelectorAll("#toc li a");
-  // 取消所有active
-  toclist.forEach((element) => {
-    element.dataset.active = false;
-  });
-  toclist_ids = [...toclist].map((item) => item.href.split("/#").reverse()[0]);
-  index = toclist_ids.indexOf(id);
-  current = toclist[index];
-  current.dataset.active = true;
+  if (activetoc) {
+    const id = activetoc.id;
+    toclist = document.querySelectorAll("#toc li a");
+    // 取消所有active
+    toclist.forEach((element) => {
+      element.dataset.active = false;
+    });
+    toclist_ids = [...toclist].map((item) => item.href.split("/#").reverse()[0]);
+    index = toclist_ids.indexOf(id);
+    current = toclist[index];
+    current.dataset.active = true;
+  }
 }
 
 //给脚注增加返回链接
@@ -76,8 +78,9 @@ function addBackRef() {
 
 window.onload = function () {
   const btn_toogle_theme = document.querySelector("#btn-toggle");
-  const main_dom = document.querySelector("div#main");
+  const main_dom = document;
   btn_toogle_theme.onclick = toogle_theme;
+
   main_dom.addEventListener("scroll", () => {
     markToc();
   });
