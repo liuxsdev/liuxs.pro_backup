@@ -6,7 +6,7 @@
   <div>
     {% for year, pages in section.pages|group_by(attribute = 'year') %}
       <div class="posts-group flex-row mb-6 sm:flex">
-        <div class="post-year text-lg p-2 pt-4 opacity-60 font-din font-semibold sm:mr-6 sm:text-2xl">{{ year }}</div>
+        <div class="post-year text-lg p-2 pt-4 opacity-80 font-din font-semibold sm:mr-6 sm:text-2xl title-text-color">{{ year }}</div>
         <div class="posts grow">
           {% for page in pages %}
             <div class="p-2 border-b border-dashed border-gray-300">
@@ -28,7 +28,7 @@
       {% endif %}
       {% for year, pages in pages|group_by(attribute = 'year') %}
         <div class="posts-group flex-row mb-6 sm:flex">
-          <div class="post-year text-lg p-2 pt-4 opacity-60 font-din font-semibold sm:mr-6 sm:text-2xl">{{ year }}</div>
+          <div class="post-year text-lg p-2 pt-4 opacity-60 font-din font-semibold sm:mr-6 sm:text-2xl title-text-color">{{ year }}</div>
           <div class="posts grow">
             {% for page in pages %}
               <div class="p-2 border-b border-dashed border-gray-300">

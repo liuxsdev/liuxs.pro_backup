@@ -34,16 +34,21 @@
     prose-p:my-4
     prose-img:shadow-lg
     prose-code:font-normal
+    prose-a:text-blue-500
     prose-code:text-orange-600
     dark:prose-code:text-orange-300
     prose-p:text-gray-900
-    dark:prose-p:text-gray-300;
+    dark:prose-p:text-gray-300
+    dark:prose-a:text-blue-300;
   }
 }
 
 @layer components {
   .pagination-btn {
     @apply text-sm px-3 py-1 bg-gray-200 rounded-md dark:bg-gray-700 hover:underline hover:text-blue-500;
+  }
+  .title-text-color {
+    @apply text-gray-900 dark:text-gray-200;
   }
 }
 
