@@ -1,2 +1,1 @@
-# LightSnow
-A simple theme for My Zola static site
+My Website Build With Zola
