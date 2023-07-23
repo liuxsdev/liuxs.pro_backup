@@ -31,6 +31,7 @@
     prose-pre:font-mono
     prose-pre:text-base
     prose-p:font-medium 
+    prose-p:leading-loose
     prose-p:my-4
     prose-img:shadow-lg
     prose-code:font-normal
@@ -86,9 +87,14 @@ blockquote p {
   @apply text-gray-500 text-sm not-italic dark:text-gray-400 font-medium !important;
 }
 
-/* code */
+/* blockquote 里面的 `行内代码` */
+blockquote p code {
+  @apply px-1 py-0.5 !important;
+}
+
+/* code `行内代码` */
 p code {
-  @apply p-1.5 rounded-md bg-gray-900/10 mx-2 dark:bg-gray-100/20 !important;
+  @apply px-1.5 py-1 rounded-md bg-gray-900/10 mx-2 dark:bg-gray-100/20 !important;
 }
 
 code::before,
