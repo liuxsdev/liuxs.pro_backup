@@ -13,7 +13,7 @@ draft: false
 
 `cryptography`的安装编译需要有 C 编译器、Rust 编译器等，参考在 Debian/Ubuntu 上安装时需要的软件包[^1]。
 
-```shell
+```bash
 sudo apt-get install build-essential libssl-dev libffi-dev python3-dev cargo pkg-config
 ```
 
@@ -21,13 +21,13 @@ sudo apt-get install build-essential libssl-dev libffi-dev python3-dev cargo pkg
 
 安装好 rust 等依赖后，使用这个命令[^2]安装 cryptography 38.0.4 版本:
 
-```shell
+```bash
 export RUSTFLAGS=" -C lto=no" && export CARGO_BUILD_TARGET="$(rustc -vV | sed -n 's|host: ||p')" && pip install cryptography==38.0.4
 ```
 
 然后安装 mitmproxy
 
-```shell
+```bash
 pip install mitmproxy
 ```
 
@@ -35,7 +35,7 @@ pip install mitmproxy
 
 下载地址: <https://drive.liuxs.pro/zh-CN/Software/Termux/mitmproxy/>
 
-```shell
+```bash
 pip install cryptography-38.0.4-cp311-cp311-linux_aarch64.whl
 pip install mitmproxy_wireguard-0.1.23-cp37-abi3-linux_aarch64.whl
 pip install ruamel.yaml.clib-0.2.7-cp311-cp311-linux_aarch64.whl
